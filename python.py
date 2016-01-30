@@ -340,17 +340,84 @@ while(i <= 20) :
 
 
 
+'''
+	--------------------------------------------------------
+									Working with Functions
+	--------------------------------------------------------
+'''
 
+# Creating a new function
+def addNumber(fNum, lNum) :
+	# Varible inside this function is not exists 
+	# outside this function
+	# This variable is out of the global scope
+	sumNum = fNum + lNum
+	# If you want to return something to the caller of this
+	# function you type in the function the word 'return'
+	# and the value this function has to return
+	return sumNum
 
+# Let's print out this function
+print(addNumber(1,4))
 
+# Or we can put the result of the function execution 
+# into the variable
+string = addNumber(1, 5)
+print(string)
 
+# We can get the input from the user
+print('What is your name?')
+# Here we are using sys library
+# stdin - standart input
+#name = sys.stdin.readline() # uncomment this to run
+#print('Hello', name) # uncomment this to run
 
+# We can get substrings
+long_string = 'I\'ll catch you if you fall - The Floor'
+print(long_string[0:4]) # from index 0 to 4 not inscluding
 
+# We can print last five characters
+print(long_string[-5:])
 
+# We can print out the string without last five characters
+print(long_string[:-5])
 
+# We can join two strings together
+# We get a substring and concatinate with another string
+print(long_string[:4] + ' be there')
 
+# %c - means a character
+# %d - means a digit
+# %s - means a string
+# %.5f - means (f) five decimal places
+print('%c is my %s letter and my number %d number is %.5f' % ('X', 'favourite', 1, .14))
 
+# We can capitalize all letters of the string
+print(long_string.capitalize())
 
+# We can find word in the string
+# This is case sensitive
+print(long_string.find('Floor'))
+
+# We can make sure that everything is a alpha
+print(long_string.isalpha())
+
+# We can make sure that everything is a number
+print(long_string.isalnum())
+
+# We can get the length of our string
+print(len(long_string))
+
+# We can replace exact word with another word
+print(long_string.replace('Floor', 'Ground'))
+
+# Also we can cut off whitespaces at the start and at
+# the end of the string
+print(long_string.strip())
+
+# We may split string into a list
+quote_list = long_string.split(' ')
+print(quote_list)
 
 
 
