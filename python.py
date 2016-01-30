@@ -570,6 +570,29 @@ print(spot.get_name())
 
 
 
+'''
+	--------------------------------------------------------
+									How Polymophism Works
+	--------------------------------------------------------
+'''
+
+class AnimalTesting:
+	def get_type(self, animal) :
+		animal.get_type()
+
+test_animals = AnimalTesting()
+
+# Using AnimalTesting Class we get type of created animals
+test_animals.get_type(cat)
+test_animals.get_type(spot)
+
+# This will execute four times
+spot.mutiple_sounds(4)
+# This will not work
+spot.mutiple_sounds(4)
+spot.mutiple_sounds(4)
+spot.mutiple_sounds(4)
+spot.mutiple_sounds(4)
 
 
 
