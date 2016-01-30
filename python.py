@@ -462,3 +462,119 @@ print(text_in_file)
 
 
 
+
+'''
+	--------------------------------------------------------
+									Working with Objects
+	--------------------------------------------------------
+'''
+
+# Creating a blueprint for our animals
+class Animal :
+	# Two underscores means that properties will be private
+	# This is called incupsulation
+	__name = None # Instead of None you may have an empty string
+	__height = 0
+	__weight = 0
+	__sound = 0
+
+	# In classes we can work with constructors
+	def __init__(self, name, height, weight, sound) :
+		# then we want to define this values
+		self.__name = name
+		self.__height = height
+		self.__weight = weight
+		self.__sound = sound
+
+
+	# self works like this in other languages
+	# this function is called SETTER
+	def set_name(self, name) :
+		self.__name = name
+
+	# this function is called GETTER
+	def get_name(self) :
+		return self.__name
+
+	def set_height(self, height) :
+		self.__height = height
+
+	def get_height(self) :
+		return self.__height
+
+	def set_weight(self, weight) :
+		self.__weight = weight
+
+	def get_weight(self) :
+		return self.__weight
+
+	def set_sound(self, sound) :
+		self.__sound = sound
+
+	def get_sound(self) :
+		return self.__sound
+
+	def get_type(self) :
+		print('Animal')
+
+	def toString(self) :
+		# {} says what to put in
+		return '{} is {} cm tall and {} kilograms and say {}'.format(self.__name,
+						self.__height,
+						self.__weight,
+						self.__sound)
+
+
+
+cat = Animal('Whiskers', 33, 10, 'Meow')
+
+print(cat.toString())
+
+
+
+# Let's create new object and inherit it from Animal class
+class Dog(Animal) :
+	__owner = None
+
+	def __init__(self, name, height, weight, sound, owner):
+		# We write here new parameters
+		self.__owner = owner
+		# To inherit class we have to type super
+		super(Dog, self).__init__(name, height, weight, sound)
+
+	def set_owner(self, owner):
+		self.__owner = owner
+
+	def get_owner(self) :
+		return self.__owner
+
+	def get_type(self) :
+		print('Dog')
+
+	def toString(self) :
+		return '{} is {} cm tall and {} kilograms and say {}. His owner is {} '.format(self.__name, self.__height,self.__weight, self.__sound, self.__owner)
+
+	def mutiple_sounds(self, how_many=None) :
+		if how_many is None :
+			print(self.get_sound())
+		else :
+			print(self.get_sound() * how_many)
+
+# Creating object from Dog Class
+spot = Dog('Spot', 53, 27, 'Ruff', 'Jerry')
+
+# We get name of the dog
+print(spot.get_name())
+
+
+
+
+
+
+
+
+
+
+
+
+
