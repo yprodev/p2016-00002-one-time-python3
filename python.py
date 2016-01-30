@@ -222,6 +222,88 @@ print(super_villains.values())
 
 
 
+'''
+	--------------------------------------------------------
+									Working with Conditions
+	--------------------------------------------------------
+'''
+
+'''
+	We use conditions like:
+
+		if
+		else
+		elif
+
+	in different circumstances.
+
+	We need to use different comparison operators:
+
+		== - equal to
+		!= - not equal to
+		> - greater then
+		< - less then
+		>= - greater then or equal to
+		<= - less then or equal to
+
+	We may to use different logical operators:
+
+		and
+		or
+		not
+
+'''
+
+# Our first conditional statement
+age = 21
+
+if age > 16 :
+	print('You are old enough to drive')
+else :
+	print('You are not old enough to drive')
+
+# Our second conditional statement with different operator
+if age >= 21 :
+	print('You are old enough to drive a tractor trailer')
+elif age >= 16 :
+	print('You are old enough to drive a car')
+else :
+	print('You are not old enough')
+
+
+# Conditional statements with logical operators
+if ((age >= 1) and (age <= 18)) :
+	print('You get a birthday')
+elif (age == 21) or (age >= 65) :
+	print('You get a northday')
+elif not(age == 30) :
+	print('You do not get a birthday')
+else :
+	print('You get a birthday party')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
