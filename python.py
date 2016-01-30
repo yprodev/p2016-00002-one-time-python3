@@ -143,14 +143,82 @@ print(grocery_list)
 to_do_list2 = other_events + grocery_list
 print(to_do_list2)
 
+# We may get last item alphabeticaly
+print(max(to_do_list2))
+
+# We may get a minimum item that comes first alphabeticaly
+print(min(to_do_list2))
 
 
 
 
+'''
+	--------------------------------------------------------
+										Working with Tuples
+	--------------------------------------------------------
+'''
+
+# Tuples are surrounded by ()
+# We CAN NOT change a tuple
+# We can change a tuple ONLY if we convert tuple into a list
+# Then do stuff we need to do with tuple (converted)
+# And then convert this list beckwards in the tuple
+pi_tuple = (3,1,4,1,5,9)
+
+# Converting a tuple into a list
+new_list = list(pi_tuple)
+
+# Convertin a list into a tuple
+new_tuple = tuple(new_list)
+
+# We may discover the lenght of the tuple
+len(new_tuple)
+
+# Get the minimum from the tuple using min function
+min(new_tuple)
+
+# Get the maximum from the tuple using max function
+max(new_tuple)
 
 
 
 
+'''
+	--------------------------------------------------------
+									Working with Dictionaries
+	--------------------------------------------------------
+'''
+
+# Creating a dictionary
+super_villains = {'Fiddler' : 'Isaac',
+									'Captain Cold' : 'Leonard Snart',
+									'Weather Wizard' : 'Mark Mardon',
+									'Mirror Master' : 'Sam Scudder',
+									'Pied Piper' : 'Thomas Peterson'}
+
+# Let's print out the value from the dictionary
+print(super_villains['Captain Cold'])
+
+# Let's delete somebody from the list
+del super_villains['Fiddler']
+print(super_villains)
+
+# We may change key value
+super_villains['Pied Piper'] = 'Hartley Rathaway'
+print(super_villains['Pied Piper'])
+
+# We can find out the lenth of our dictionary
+dic_len = len(super_villains)
+print(dic_len)
+
+# We can get value from this dictionary
+print(super_villains.get('Pied Piper'))
+
+# Let's print out keys in our dictionary
+print(super_villains.keys())
+
+# The same thing we are going to do with values
+print(super_villains.values())
 
 
 
