@@ -285,8 +285,58 @@ else :
 
 
 
+'''
+	--------------------------------------------------------
+									Working with Looping
+	--------------------------------------------------------
+'''
+
+# Repeat the same thing from 0 to 10 times
+for x in range(0, 10) :
+	print(x, ' ', end='')
+
+print('\n')
+
+# Let's cycle through a list we have already created
+for y in grocery_list:
+	print(y)
+
+# Let's loop through a list we will define in the loop
+for x in [2,3,6,8,10]:
+	print(x)
+
+num_list = [[1,2,3], [10,20,30], [100,200,300]]
+
+# Cycle through list of lists
+for x in range(0,3):
+	for y in range(0,3):
+		print(num_list[x][y])
 
 
+
+# We can create while loops
+# Now we will use random library
+random_num = random.randrange(0, 15)
+
+while(random_num != 10) :
+	# print(random_num) # commment out to run
+	random_num = random.randrange(0,20)
+
+
+# Let's create a for loop
+# Here we need to create an interator
+i = 0;
+
+while(i <= 20) :
+	if (i%2 == 0) :
+		# print(i) # Comment out to run
+		break # ..and comment this
+	elif (i == 9) :
+		break
+	else : 
+		i += 1 # Short hand notation
+		continue
+	i += 1
 
 
 
