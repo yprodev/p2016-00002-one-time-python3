@@ -421,10 +421,43 @@ print(quote_list)
 
 
 
+'''
+	--------------------------------------------------------
+									Working with Python I/O
+	--------------------------------------------------------
+'''
 
+# Use ab+ to READ & APPEND to file. It also opens or
+# creates the file
+# wb - a command that means to write to the file
+test_file = open('text.txt', 'wb')
 
+# This will print out the mode or command we have written
+# on the previous stage (wb)
+print(test_file.mode)
 
+# Print out file name
+print(test_file.name)
 
+# Write something to the file
+# bytes - means the method we write to the file
+test_file.write(bytes('Write me to the file \n', 'UTF-8'))
+
+# To close a file you simply type
+test_file.close()
+
+# How we can read information from a file
+# r+ - means reading
+test_file = open('text.txt', 'r+')
+
+# After we have opened the file we need to read it
+text_in_file = test_file.read()
+
+# And now we will print out our data
+print(text_in_file)
+
+# We may delete this file
+# os.remove('text.txt') # Uncomment this to run
 
 
 
